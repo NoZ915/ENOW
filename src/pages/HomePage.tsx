@@ -5,6 +5,7 @@ import PromoBanners from "../components/PromoBanners";
 import CategoryStrip from "../components/CategoryStrip";
 import { allRestaurants, bestDeals, recommended } from "../fakeData/restaurantCard";
 import Section from "../components/Section";
+import SectionGrid from "../components/SectionGrid";
 
 export default function Home() {
   return (
@@ -20,9 +21,11 @@ export default function Home() {
               <PromoBanners />
               <Divider my="lg" />
               <CategoryStrip />
-              <Section title="Best Deals" cards={bestDeals} />
-              <Section title="Recommended for You" cards={recommended} />
-              <Section title="All Restaurants" cards={allRestaurants} />
+              <div className={styles.restaurantCardSections}>
+                <Section title="Best Deals" cards={bestDeals} />
+                <Section title="Recommended for You" cards={recommended} />
+                <SectionGrid title="All Restaurants" cards={allRestaurants} />
+              </div>
             </Grid.Col>
           </Grid>
         </Container>

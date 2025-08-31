@@ -1,0 +1,36 @@
+.restaurantCardsContainer{
+    margin-top: 26px;
+}
+
+.carouselViewport {
+  overflow-x: auto;
+  overflow-y: visible;
+  scroll-behavior: smooth;
+  padding-bottom: 4px;
+}
+
+.carouselViewport::-webkit-scrollbar {
+  height: 8px;
+}
+.carouselViewport::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+.carouselViewport:hover::-webkit-scrollbar-thumb {
+  background: #e5e7eb;
+  border-radius: 9999px;
+}
+
+.row {
+  display: flex;
+  gap: 16px; 
+}
+
+.cardCol {
+  flex: 0 0 300px; 
+}
+
+@media (max-width: 640px) {
+  .cardCol {
+    flex-basis: 100%;
+  }
+}
