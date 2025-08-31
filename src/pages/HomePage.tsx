@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <main className={styles.main}>
-        <Container className={styles.pageContainer}>
+        <Container size={1280} className={styles.pageContainer}>
           <Grid gutter="xl">
             <Grid.Col span={{ base: 12, md: 3 }}>
               <Sidebar />

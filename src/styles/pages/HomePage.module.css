@@ -1,16 +1,12 @@
 .main {
+  margin: 48px auto 0px auto;
+  max-width: 1280px;
+  padding-top: 0 !important;
   background: #fff;
 }
 
 .pageContainer {
-  max-width: 1200px;
-  padding: 20px;
-  margin: 0 auto;
-}
-
-/* 讓內容不會被 sticky header 擋住 */
-.main {
-  padding-top: 16px;
+  max-width: var(--container-size) !important;
 }
 
 .promoRow {

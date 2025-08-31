@@ -1,4 +1,4 @@
-import { Box, Card, Grid, Group, Image, Text } from "@mantine/core";
+import { Button, Card, Grid, Stack, Text } from "@mantine/core";
 import styles from "../styles/components/PromoBanners.module.css";
 
 export default function PromoBanners() {
@@ -6,24 +6,39 @@ export default function PromoBanners() {
     <Grid gutter="md" className={styles.promoRow}>
       <Grid.Col span={{ base: 12, sm: 6 }}>
         <Card radius="lg" padding="lg" className={styles.promoCard}>
-          <Group justify="space-between" align="center">
-            <Box>
-              <Text fw={700} fz={18}>Invite friends to use Eat Now</Text>
-              <Text fz="sm" c="dimmed">and get a $100 discount!</Text>
-            </Box>
-            <Image src="./PromoBanner1.png" className={styles.bannerImg} />
-          </Group>
+          <img
+            src="./PromoBanner1.png"
+            className={`${styles.bannerImg} ${styles.left}`}
+            alt=""
+            aria-hidden
+          />
+          <Stack gap={10} className={styles.content}>
+            <Text fw={700} size="20px" c="#202434" lh="28px">
+              Invite friends to use Eat Now and get a $100 discount!
+            </Text>
+            <Button radius="360px" color="#3B4769" fw={400} classNames={{ root: styles.ctaBtn }}>
+              See more
+            </Button>
+          </Stack>
         </Card>
       </Grid.Col>
+
       <Grid.Col span={{ base: 12, sm: 6 }}>
         <Card radius="lg" padding="lg" className={styles.promoCard}>
-          <Group justify="space-between" align="center">
-            <Box>
-              <Text fw={700} fz={18}>Invite friends to use Eat Now</Text>
-              <Text fz="sm" c="dimmed">and get a $100 discount!</Text>
-            </Box>
-            <Image src="./PromoBanner2.png" className={styles.bannerImg} />
-          </Group>
+          <img
+            src="./PromoBanner2.png"
+            className={`${styles.bannerImg} ${styles.right}`}
+            alt=""
+            aria-hidden
+          />
+          <Stack gap={10} className={styles.content}>
+            <Text fw={700} size="20px" c="#202434" lh="28px">
+              Invite friends to use Eat Now and get a $100 discount!
+            </Text>
+            <Button radius="360px" color="#3B4769" fw={400} classNames={{ root: styles.ctaBtn }}>
+              See more
+            </Button>
+          </Stack>
         </Card>
       </Grid.Col>
     </Grid>
