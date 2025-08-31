@@ -9,7 +9,7 @@ export default function RestaurantCard({ data }: { data: CardData }) {
   const iconDiscount = <Image src="./Icon_Discount.png" className={styles.metaIcon} alt="" />;
 
   return (
-    <Card withBorder radius={8} className={styles.foodCard}>
+    <Card component="a" href={`/restaurant/${data.title}`} withBorder radius={8} className={styles.foodCard}>
       <Card.Section className={styles.imageWrap}>
         <Image src={data.img} alt={data.title} h={170} w="100%" fit="cover" />
         {data.badge && 
