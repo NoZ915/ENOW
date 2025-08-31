@@ -1,4 +1,4 @@
-import { Container, Divider, Grid, Text } from "@mantine/core";
+import { Container, Divider, Grid } from "@mantine/core";
 import styles from "../styles/pages/HomePage.module.css";
 import Sidebar from "../components/Sidebar";
 import PromoBanners from "../components/PromoBanners";
@@ -6,6 +6,7 @@ import CategoryStrip from "../components/CategoryStrip";
 import { allRestaurants, bestDeals, recommended } from "../fakeData/restaurantCard";
 import Section from "../components/Section";
 import SectionGrid from "../components/SectionGrid";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -30,11 +31,7 @@ export default function Home() {
           </Grid>
         </Container>
       </main>
-      <footer className={styles.footer}>
-        <Container className={styles.pageContainer}>
-          <Text c="dimmed" fz="sm">© 2025 Eat Now Technologies Inc.</Text>
-        </Container>
-      </footer>
+      <Footer />
     </>
   );
 }
