@@ -1,0 +1,35 @@
+.priceRoot {
+  width: 100%;
+  background-color: #fff !important;
+  padding: 0 !important;
+  border: 0;
+  display: flex;
+  gap: 8px;
+}
+
+.priceControl {
+  flex: 1;
+  height: 40px;
+  border-radius: 100px;
+  border: 1.5px solid #FF9537;
+  background-color: #fff;
+}
+
+.priceInnerLabel {
+  font-weight: 500;
+  color: #FF9537;
+  vertical-align: middle;
+}
+
+.priceLabel {
+  border-radius: 100px;
+}
+
+.priceControl[data-active="true"] .priceInnerLabel {
+  color: #202434;
+}
+
+.priceControl[data-active="true"] {
+  border-radius: 100px;
+  background-color: #FF9537;
+}

@@ -1,0 +1,9 @@
+body,
+header {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --header-h: 64px;
+}

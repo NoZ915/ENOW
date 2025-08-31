@@ -1,0 +1,87 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #FFF7ED;
+}
+
+.header * {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  margin: 0 80px;
+  padding: 16px 80px;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.leftGroup {
+  flex: 1;
+  min-width: 0;
+}
+
+.rightGroup {
+  flex-shrink: 0;
+}
+
+.logoImage {
+  max-width: 113px;
+  width: 100%;
+  height: auto;
+}
+
+.iconLocationImage {
+  max-width: 16px;
+  width: 100%;
+  height: auto;
+}
+
+
+.iconChevronDownImage {
+  max-width: 17px;
+  width: 100%;
+  height: auto;
+}
+
+.iconSearch {
+  max-width: 17px;
+  width: 100%;
+  height: auto;
+}
+
+.selectInput {
+  border-radius: 8px;
+  width: 100%;
+  max-width: 200px;
+
+  background-color: #fff;
+}
+
+.input {
+  border-radius: 8px;
+  width: 100%;
+
+  background-color: #fff;
+}
+
+.shoppingCartBtnRoot {
+  margin: 0 24px;
+  padding: 0 8px !important;
+  width: 24px;
+  height: 24px;
+}
+
+.loginBtnRoot {
+  width: 46px;
+}
+
+.loginBtnLabel {
+  color: black;
+}
