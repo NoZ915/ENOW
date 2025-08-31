@@ -1,30 +1,41 @@
-import { Badge, Card, Group, Image, Rating, Stack, Text } from "@mantine/core";
+import { Badge, Card, Group, Image, Text } from "@mantine/core";
 import styles from "../styles/components/RestaurantCard.module.css";
 import type { CardData } from "../types/types";
 
 export default function RestaurantCard({ data }: { data: CardData }) {
+  const iconTruck = <Image src="./Icon_Delivery.png" className={styles.metaIcon} alt="" />;
+  const iconClock = <Image src="./Icon_Time.png" className={styles.metaIcon} alt="" />;
+  const iconStar  = <Image src="./Icon_Star.png" className={styles.metaIcon} alt="" />;
+  const iconDiscount = <Image src="./Icon_Discount.png" className={styles.metaIcon} alt="" />;
+
   return (
-    <Card radius="md" withBorder className={styles.foodCard}>
-      <Card.Section>
-        <Image src={data.img} className={styles.foodImg} alt={data.title} />
-        {data.badge && (
-          <Badge className={styles.cornerBadge}>{data.badge}</Badge>
-        )}
+    <Card withBorder radius={8} className={styles.foodCard}>
+      <Card.Section className={styles.imageWrap}>
+        <Image src={data.img} alt={data.title} h={170} w="100%" fit="cover" />
+        {data.badge && 
+          <Badge fw={400} size="lg" color="#FFE688" c="#202434" leftSection={iconDiscount} className={styles.cornerBadge}>
+            {data.badge}
+          </Badge>
+        }
       </Card.Section>
-      <Stack gap={6} mt={8}>
-        <Group justify="space-between" align="center">
-          <Text fw={600}>{data.title}</Text>
-          <Group gap={6}>
-            <Rating value={data.rating} fractions={2} readOnly size="xs" />
-            <Text fz={12} c="dimmed">{data.rating.toFixed(1)}</Text>
+
+      <Card.Section className={styles.info}>
+        <Group justify="space-between" align="center" mb={6}>
+          <Text fw={700} size="16px" c="#202434">{data.title}</Text>
+          <Group gap={6} align="center">
+            {iconStar}
+            <Text fw={400} size="16px" c="#475682">{data.rating.toFixed(1)}</Text>
           </Group>
         </Group>
-        <Group gap={10} c="dimmed" fz={12}>
-          <Text>💲{data.price}</Text>
-          <Text>•</Text>
-          <Text>{data.time}</Text>
+
+        <Group gap={10} align="center" fz={14}>
+          {iconTruck}
+          <Text fw={700} size="16px" c="#475682">${data.price}</Text>
+          <Text c="#9aa3af">•</Text>
+          {iconClock}
+          <Text fw={700} size="16px" c="#475682">{data.time}</Text>
         </Group>
-      </Stack>
+      </Card.Section>
     </Card>
   );
 }

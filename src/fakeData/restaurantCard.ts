@@ -5,12 +5,16 @@ export const bestDeals: CardData[] = [
   { img: "./food_ramen.png", title: "One Bowl Ramen", price: "30", time: "20–30 min", rating: 4.5, badge: "50% Off Picks" },
   { img: "./food_xlb.png", title: "Xiao Long Bao House", price: "25", time: "30–40 min", rating: 4.0, badge: "50% Off Picks" },
   { img: "./food_bbq.png", title: "Fire Dance BBQ", price: "60", time: "40–50 min", rating: 4.5 },
+  { img: "./food_congee.png", title: "Just Right Congee", price: "37", time: "10–20 min", rating: 4.0, badge: "50% Off Picks" },
 ];
 
 export const recommended: CardData[] = [
   { img: "./food_taco.png", title: "Taco Mania", price: "60", time: "40–50 min", rating: 4.0, badge: "Limited-Time Free Delivery" },
   { img: "./food_sushi.png", title: "Aburi Sushi Master", price: "60", time: "10–20 min", rating: 4.0, badge: "Limited-Time Free Delivery" },
   { img: "./food_kfry.png", title: "K-Fry Express", price: "30", time: "20–30 min", rating: 4.5, badge: "50% Off Picks" },
+  { img: "./food_fiesta.png", title: "Fiesta", price: "30", time: "10–20 min", rating: 4.0, badge: "Limited-Time Free Delivery" },
+  { img: "./food_gyoza.png", title: "Gyoza Story", price: "50", time: "20–30 min", rating: 4.5 },
+  { img: "./food_churro.png", title: "Churro Sweeties", price: "70", time: "20–30 min", rating: 3.5, badge: "50% Off Picks" },
 ];
 
 export const allRestaurants: CardData[] = [

@@ -29,7 +29,7 @@ export default function SectionGrid({
       </div>
 
       <div className={styles.seeMoreWrap}>
-        <Button radius="xl" variant="light" onClick={onSeeMore}>
+        <Button radius="xl" variant="filled" color="#FFE688" c="#202434" onClick={onSeeMore} classNames={{ label: styles.seeMoreBtnLabel}}>
           See more
         </Button>
       </div>
